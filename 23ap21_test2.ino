@@ -18,8 +18,8 @@ RTC_DS3231 rtc;
 
 // Wifi stuff
 #ifndef STASSID
-#define STASSID "Beta_Test"
-#define STAPSK  "getlost@789"
+#define STASSID "your_ssid"
+#define STAPSK  "your_passwd"
 #endif
 const char* ssid     = STASSID;
 const char* password = STAPSK;
@@ -33,9 +33,9 @@ TinyGPSPlus gps;
 SoftwareSerial ss(RXPin, TXPin);
 
 // WEB Server
-//const char* host = "3.17.73.42";
-//const uint16_t port = 8008;
-String serverName = "http://vactrackproject.ddns.net:8008/inputdata";
+//const char* host = "";
+//const uint16_t port = ;
+String serverName = "http://vactrackproject.ddns.net:port/inputdata"; //specifie port
 HTTPClient http;
 
 void setup() {
