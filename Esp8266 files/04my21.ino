@@ -1,7 +1,6 @@
 #include <SPI.h>
 #include <SD.h>
 #include <RTClib.h>
-//
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include <SoftwareSerial.h>
