@@ -16,8 +16,8 @@ RTC_DS3231 rtc;
 
 // Wifi set SSID and PASSWD
 #ifndef STASSID
-#define STASSID "Beta_Test"
-#define STAPSK  "getlost@789"
+#define STASSID "Your_SSID"
+#define STAPSK  "Your_PASSWD"
 #endif
 const char* ssid     = STASSID;
 const char* password = STAPSK;
@@ -31,8 +31,8 @@ TinyGPSPlus gps;
 SoftwareSerial ss(RXPin, TXPin);
 
 // WEB Server Address
-//      replace String port with your port number
-String serverName = "http://vactrackproject.ddns.net:8008/inputdata";
+//      replace yourwebaddress:port with your address and port number
+String serverName = "http://yourwebaddress:port/inputdata";
 HTTPClient http;
 
 //Global variables
