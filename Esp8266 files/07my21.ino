@@ -189,8 +189,8 @@ void loop()
         // If internet update server client.connected()
         while (client.connected()) {
           Serial.println("Online");
-          //onlineUpdate();
-          offlineUpdate();
+          onlineUpdate();
+          //offlineUpdate();  // for test purpose only
           delay(30000);
         }
       }
