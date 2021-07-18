@@ -28,10 +28,10 @@ Download and extract my Flask web application to your required destination. And 
 
 Device can be wired according to given circuit diagram. Now on Arduino IDE edit the following line to your requirements.
 This is the tracker ID. 
-``` const char* pgtid = "TID001"; ```
+``` const char* pgtid = "TID001";
 Replace yourwebaddress:port with your webserver ipaddres/ddns address and port.
-``` String serverName = "http://yourwebaddress:port/inputdata"; ```
+``` String serverName = "http://yourwebaddress:port/inputdata";
 Replace your wifi ssid and passwd.
 ``` #define STASSID "Your_SSID"
-#define STAPSK  "Your_PASSWD" ```
+#define STAPSK  "Your_PASSWD"
 
