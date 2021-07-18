@@ -11,12 +11,17 @@ This is the project to track the vaccination carrier with gps coordination along
 + PCB borad
 + Female and male headers
 + Female to Female jumpers
++ OLED 128x64 display (optional)
 ### Software required
 + Arduino IDE 
 + libraries required
   - SD
   - RTClib
-  - ESP8266WiFi
+  - ESP8266
   - SoftwareSerial
   - TinyGPS++
+  - Adafruit SSD 1306 and Adafruit gfx (for ver. Oled display only)
 + Any webserver. I used AWS for web hosting.
+  - Flask
+### Configuration
+Download and extract my Flask web application to your required destination. And start flask webapp with any deployment (I used gunisorn which was easy made the process easy) using following intructions from this git https://github.com/app-generator/flask-adminkit.
