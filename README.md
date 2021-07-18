@@ -13,10 +13,10 @@ This is the project to track the vaccination carrier with gps coordination along
 + Female to Female jumpers
 ### Software required
 + Arduino IDE 
-libraries required
-- SD
-- RTClib
-- ESP8266WiFi
-- SoftwareSerial
-- TinyGPS++
++ libraries required
+  - SD
+  - RTClib
+  - ESP8266WiFi
+  - SoftwareSerial
+  - TinyGPS++
 + Any webserver. I used AWS for web hosting.
