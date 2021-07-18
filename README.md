@@ -27,5 +27,6 @@ This is the project to track the vaccination carrier with gps coordination along
 Download and extract my Flask web application to your required destination. And start flask webapp with any deployment (I used gunisorn which was easy made the process easy) using following intructions from this git https://github.com/app-generator/flask-adminkit.
 
 Device can be wired according to given circuit diagram. Now on Arduino IDE edit the following line to your requirements.
-""" // Tracker ID
-const char* pgtid = "TID001"; """
+``` // Tracker ID
+const char* pgtid = "TID001";```
+
