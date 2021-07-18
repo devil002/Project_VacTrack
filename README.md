@@ -42,5 +42,36 @@ Replace your wifi ssid and passwd.
 #define STASSID "Your_SSID"
 #define STAPSK  "Your_PASSWD"
 ```
+The *Home* blueprint handles UI Kit pages for authenticated users. This is the private zone of the app - the structure is presented below:
 
+```bash
+< PROJECT ROOT >
+   |
+   |-- app/
+   |    |-- base/                     # Base Blueprint - handles the authentication
+   |    |-- home/                     # Home Blueprint - serve app pages (private area)
+   |         |
+   |         |-- templates/           # UI Kit Pages
+   |              |
+   |              |-- index.html      # Default page
+   |              |-- index.html      # Default page
+   |              |-- index.html      # Default page
+   |              |-- index.html      # Default page
+   |              |-- index.html      # Default page
+   |              |-- index.html      # Default page
+   |              |-- page-404.html   # Error 404 - mandatory page
+   |              |-- page-500.html   # Error 500 - mandatory page
+   |              |-- page-403.html   # Error 403 - mandatory page
+   |              |-- *.html          # All other HTML pages
+   |
+   |-- requirements.txt               # Development modules - SQLite storage
+   |-- requirements-mysql.txt         # Production modules  - Mysql DMBS
+   |-- requirements-pqsql.txt         # Production modules  - PostgreSql DMBS
+   |
+   |-- .env                           # Inject Configuration via Environment
+   |-- config.py                      # Set up the app
+   |-- run.py                         # Start the app - WSGI gateway
+   |
+   |-- ************************************************************************
+```
 
