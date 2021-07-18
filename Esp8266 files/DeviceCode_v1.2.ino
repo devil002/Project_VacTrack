@@ -29,8 +29,8 @@ RTC_DS3231 rtc;
 
 // Wifi set SSID and PASSWD
 #ifndef STASSID
-#define STASSID "Thor@2.4Ghz"
-#define STAPSK  "watchit@dlink2"
+#define STASSID "Your_SSID"
+#define STAPSK  "Your_PASSWD"
 #endif
 const char* ssid     = STASSID;
 const char* password = STAPSK;
@@ -45,7 +45,7 @@ SoftwareSerial ss(RXPin, TXPin);
 
 // WEB Server Address
 //      replace yourwebaddress:port with your address and port number
-String serverName = "http://vactrackproject.ddns.net:8008/inputdata";
+String serverName = "http://yourwebaddress:port/inputdata";
 HTTPClient http;
 
 //Global variables
