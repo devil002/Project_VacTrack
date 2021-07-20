@@ -1,0 +1,97 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Blank2 {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+ 
+{% endblock stylesheets %}
+
+{% block content %}
+	<main class="content">
+	  <h1 class="h3 mb-3">Tracker</h1>
+	  {% if i %}
+	    {{i}}
+	  {% endif %}
+		<div class="card">
+        
+  			<div class="card-body">
+    		  <form method="post">
+                <div class="mb-3">
+                    <label for="pgtid" class="form-label">Tracker ID</label>
+                    <input type="text" class="form-control" id="pgtid" name='pgtid' placeholder="Enter Tracker ID">
+                    <label for="pgtid" class="form-label">Description (only when adding)</label>
+                    <input type="text" class="form-control" id="tagd" name='tagd' placeholder="Enter Description">
+                </div>
+                 <button type="submit" name="addpgt" value="addpgt" class="btn btn-primary mb-3">Add Tacker</button>
+                 <button type="submit" name="removepgt" value="removepgt" class="btn btn-danger mb-3">Remove Tacker</button>
+              </form>
+  			</div>
+		</div>
+		
+		{% if device_list %}
+		<h1 class="h3 mb-3">Devices</h1>
+		<div class="card">
+  		    <div class="container-fluid p-0">
+                <div class="row">
+			        <div class="col-12">
+			            <div class="card">
+				        	<div class="card-header">
+						        <h5 class="card-title mb-0">
+						        <table class="table table-hover">
+					        	    <thead>
+							            <tr>
+							            	<th scope="col">id</th>
+							            	<th scope="col">sdate</th>
+							            	<th scope="col">edate</th>
+							            	<th scope="col">status</th>
+							            	<th scope="col">tag</th>
+						            	</tr>
+					                </thead>
+									  
+					            	<tbody>
+						       	        <!--  BY devices    -->
+							            {% for row in device_list %}
+						    	            <tr>
+								                <td>{{row[2]}}</td>
+								                <td>{{row[3]}}</td>
+								                <td>{{row[4]}}</td>
+								                <form name="stat" method="post">
+								                {% if row[5] == "Active"%}
+								                	<td><button type="button" class="btn btn-success">Active</button>
+													<button name="stat" type="submit" value="{{row[2]}}_Inactive" class="btn btn-outline-danger">Inactive</button>
+													<button name="stat" type="submit" value="{{row[2]}}_Unknown" class="btn btn-outline-warning">Unknown</button></td>
+								                {% endif %}
+								                {% if row[5] == "Inactive"%}
+								                	<td><button name="stat" type="submit" value="{{row[2]}}_Active" class="btn btn-outline-success">Active</button>
+													<button type="button" class="btn btn-danger">Inactive</button>
+													<button name="stat" type="submit" value="{{row[2]}}_Unknown" class="btn btn-outline-warning">Unknown</button></td>
+								                {% endif %}
+								                {% if row[5] == "Unknown"%}
+								                	<td><button name="stat" type="submit" value="{{row[2]}}_Active" class="btn btn-outline-success">Active</button>
+													<button name="stat" type="submit" value="{{row[2]}}_Inactive" class="btn btn-outline-danger">Inactive</button>
+													<button type="button" class="btn btn-warning">Unknown</button></td>
+								                {% endif %}
+								                </form>
+								                <td>{{row[6]}}</td>
+							                 </tr>
+							            {% endfor %}
+						            </tbody>
+				            	</table>
+				            	</h5>
+				        	</div>
+			        	</div>
+			    	</div>
+                </div>
+             </div>
+		</div>
+		{% endif %}
+	</main>
+	
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE Where id in (66,120,157,242,326,380)-->
+{% block javascripts %}
+
+{% endblock javascripts %}
